@@ -2,8 +2,8 @@ import { create } from 'zustand';
 import { io } from 'socket.io-client';
 import * as mediasoupClient from 'mediasoup-client';
 
-const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || 'http://3.233.242.245:4000';
-const API_URL = import.meta.env.VITE_API_URL || 'http://3.233.242.245:4000';
+const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || 'https://3.233.242.245:443/api';
+const API_URL = import.meta.env.VITE_API_URL || 'https://3.233.242.245:443/api';
 
 export const useStreamStore = create((set, get) => ({
   socket: null,
