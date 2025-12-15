@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuthStore } from '../store/authStore';
 import { Plus, Video, Calendar, LogOut, Copy } from 'lucide-react';
 
-const API_URL = import.meta.env.VITE_API_URL || 'https://3.233.242.245:443';
+const API_URL = import.meta.env.VITE_API_URL || 'https://3.233.242.245:443/api';
 
 export default function HostDashboard() {
   const { user, supabase, signOut } = useAuthStore();
@@ -26,7 +26,7 @@ export default function HostDashboard() {
         return;
       }
 
-      const response = await fetch(`${API_URL}/api/streams/host/list`, {
+      const response = await fetch(`${API_URL}/streams/host/list`, {
         headers: {
           'Authorization': `Bearer ${session.access_token}`
         }
@@ -48,7 +48,7 @@ export default function HostDashboard() {
         return;
       }
 
-      const response = await fetch(`${API_URL}/api/streams/create`, {
+      const response = await fetch(`${API_URL}/streams/create`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
