@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuthStore } from '../store/authStore';
 import { Plus, Video, Calendar, LogOut, Copy } from 'lucide-react';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://3.233.242.245:4000';
+const API_URL = import.meta.env.VITE_API_URL || 'https://3.233.242.245:443';
 
 export default function HostDashboard() {
   const { user, supabase, signOut } = useAuthStore();
