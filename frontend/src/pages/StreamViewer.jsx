@@ -5,7 +5,7 @@ import { useStreamStore } from '../store/streamStore';
 import ChatPanel from '../components/ChatPanel';
 import { Heart, Users, Loader2 } from 'lucide-react';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://3.233.242.245:4000';
+const API_URL = import.meta.env.VITE_API_URL || 'https://3.233.242.245:443';
 
 export default function StreamViewer() {
   const { streamId } = useParams();
@@ -45,7 +45,7 @@ export default function StreamViewer() {
         return;
       }
 
-      const streamRes = await fetch(`${API_URL}/api/streams/${streamId}`, {
+      const streamRes = await fetch(`${API_URL}/streams/${streamId}`, {
         headers: {
           'Authorization': `Bearer ${session.access_token}`
         }
