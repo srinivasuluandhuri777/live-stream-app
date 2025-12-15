@@ -5,7 +5,7 @@ import { useStreamStore } from '../store/streamStore';
 import ChatPanel from '../components/ChatPanel';
 import { Heart, Users, Loader2 } from 'lucide-react';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:4000';
+const API_URL = import.meta.env.VITE_API_URL || 'http://3.233.242.245:4000';
 
 export default function StreamViewer() {
   const { streamId } = useParams();
