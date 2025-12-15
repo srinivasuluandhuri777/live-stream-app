@@ -6,7 +6,7 @@ import StreamControls from '../components/StreamControls';
 import ChatPanel from '../components/ChatPanel';
 import { ArrowLeft, Users, Copy } from 'lucide-react';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://3.233.242.245:4000';
+const API_URL = import.meta.env.VITE_API_URL || 'https://3.233.242.245:443/api';
 
 export default function StreamHost() {
   const { streamId } = useParams();
@@ -54,7 +54,7 @@ export default function StreamHost() {
         return;
       }
 
-      const streamRes = await fetch(`${API_URL}/api/streams/${streamId}`, {
+      const streamRes = await fetch(`${API_URL}/streams/${streamId}`, {
         headers: {
           'Authorization': `Bearer ${session.access_token}`
         }
@@ -108,7 +108,7 @@ export default function StreamHost() {
         return;
       }
 
-      await fetch(`${API_URL}/api/streams/${streamId}/start`, {
+      await fetch(`${API_URL}/streams/${streamId}/start`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -132,7 +132,7 @@ export default function StreamHost() {
         return;
       }
 
-      await fetch(`${API_URL}/api/streams/${streamId}/stop`, {
+      await fetch(`${API_URL}/streams/${streamId}/stop`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${session.access_token}`
