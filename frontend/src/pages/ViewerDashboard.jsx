@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuthStore } from '../store/authStore';
 import { Video, Users, Heart, LogOut, Play } from 'lucide-react';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:4000';
+const API_URL = import.meta.env.VITE_API_URL || 'http://3.233.242.245:4000';
 
 export default function ViewerDashboard() {
   const { user, supabase, signOut } = useAuthStore();
