@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuthStore } from '../store/authStore';
 import { Video, Users, Heart, LogOut, Play } from 'lucide-react';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://3.233.242.245:4000';
+const API_URL = import.meta.env.VITE_API_URL || 'https://3.233.242.245:443/api';
 
 export default function ViewerDashboard() {
   const { user, supabase, signOut } = useAuthStore();
@@ -24,7 +24,7 @@ export default function ViewerDashboard() {
       }
 
       // Fetch all live streams
-      const response = await fetch(`${API_URL}/api/streams/live`, {
+      const response = await fetch(`${API_URL}/streams/live`, {
         headers: {
           'Authorization': `Bearer ${session.access_token}`
         }
