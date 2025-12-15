@@ -5,6 +5,9 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 3000
+  },
+  preview:{
+    allowedHosts:['https://livestream.arohafresh.com']
   }
 });
 
