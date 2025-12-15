@@ -6,8 +6,14 @@ export default defineConfig({
   server: {
     port: 3000
   },
-  preview:{
-    allowedHosts:['https://livestream.arohafresh.com']
+ preview: {
+    port: 4173,
+    host: true, // Allow external connections
+    allowedHosts: [
+      'livestream.arohafresh.com',
+      'localhost',
+      '.arohafresh.com' // Allow all subdomains
+    ]
   }
 });
 
