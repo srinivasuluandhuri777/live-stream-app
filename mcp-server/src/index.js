@@ -34,7 +34,7 @@ app.use(express.json());
 const mediaServer = new MediaServer();
 
 // Protected routes require authentication
-app.use('/api/streams', authMiddleware(supabase), streamRoutes(supabase, mediaServer));
+app.use('/streams', authMiddleware(supabase), streamRoutes(supabase, mediaServer));
 
 io.use(async (socket, next) => {
   const token = socket.handshake.auth.token;
