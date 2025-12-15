@@ -6,7 +6,7 @@ import StreamControls from '../components/StreamControls';
 import ChatPanel from '../components/ChatPanel';
 import { ArrowLeft, Users, Copy } from 'lucide-react';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:4000';
+const API_URL = import.meta.env.VITE_API_URL || 'http://3.233.242.245:4000';
 
 export default function StreamHost() {
   const { streamId } = useParams();
